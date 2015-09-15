@@ -72,6 +72,7 @@
     [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:nil toKeyPath:@"errorMessage"]];
     
     RKResponseDescriptor *errorDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:errorMapping
+                                                                                    method:RKRequestMethodAny
                                                                                     pathPattern:nil
                                                                                         keyPath:@"error"
                                                                                     statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)];
